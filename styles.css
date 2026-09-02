@@ -4825,3 +4825,919 @@ body {
 }
 
 /* v57: desktop rules intentionally unchanged. */
+
+/* ===========================================================================
+   v58 — stable responsive layout for every section below the hero.
+   Desktop values above stay untouched; this block owns only phone/tablet UI.
+   ========================================================================== */
+@media (max-width: 768px) {
+  main { display: block !important; }
+
+  .container,
+  .steps-inner,
+  .comparison-wrap,
+  .parents-wrap {
+    width: min(calc(100% - 32px), 520px) !important;
+    max-width: none !important;
+    margin-inline: auto !important;
+  }
+
+  .section:not(.hero) {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 56px 0 !important;
+    overflow: hidden !important;
+  }
+
+  .section:not(.hero) h2 {
+    position: relative !important;
+    inset: auto !important;
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 0 0 28px !important;
+    font-size: clamp(28px, 8vw, 36px) !important;
+    line-height: 1.16 !important;
+    letter-spacing: -.025em !important;
+    white-space: normal !important;
+  }
+
+  .desktop-break { display: none; }
+
+  /* Familiar situations */
+  .situations-inner {
+    position: relative !important;
+    height: auto !important;
+  }
+
+  .situations h2 { padding-right: 34px !important; }
+  .situations-title-mark::after {
+    width: 178px !important;
+    height: 60px !important;
+  }
+
+  .situation-grid {
+    position: relative !important;
+    inset: auto !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .situation-card {
+    display: grid !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 136px !important;
+    grid-template-columns: 92px minmax(0, 1fr) !important;
+    align-items: center !important;
+    gap: 14px !important;
+    padding: 14px 16px !important;
+  }
+
+  .situation-icon {
+    width: 88px !important;
+    height: 102px !important;
+    margin: 0 !important;
+    object-fit: contain !important;
+  }
+
+  .situation-copy,
+  .situation-card h3,
+  .situation-card p,
+  .situation-card:nth-child(n) p {
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  .situation-card h3 {
+    margin: 0 0 7px !important;
+    font-size: 17px !important;
+    line-height: 1.18 !important;
+  }
+
+  .situation-card p {
+    font-size: 13px !important;
+    line-height: 1.42 !important;
+  }
+
+  .situation-stage {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 390 / 320 !important;
+    margin: 22px 0 -18px !important;
+    background: url('./assets/illustrations/situations-girl.png') center bottom / contain no-repeat !important;
+  }
+
+  .situation-stage > * { display: none !important; }
+  .situations-hearts { left: -18px !important; top: 75px !important; width: 68px !important; }
+  .situations-dots { right: -22px !important; top: 24px !important; width: 68px !important; }
+
+  /* Four simple steps */
+  .steps-inner {
+    position: relative !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+
+  .steps h2 { text-align: left !important; }
+  .steps h2 mark::before {
+    width: 245px !important;
+    height: 64px !important;
+  }
+  .steps-progress { display: none !important; }
+
+  .steps-grid {
+    display: grid !important;
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .step-card {
+    display: grid !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 150px !important;
+    grid-template-columns: 108px minmax(0, 1fr) !important;
+    grid-template-rows: auto auto !important;
+    align-content: center !important;
+    align-items: center !important;
+    gap: 6px 14px !important;
+    padding: 14px !important;
+  }
+
+  .step-art {
+    width: 104px !important;
+    height: 120px !important;
+    min-width: 0 !important;
+    flex: none !important;
+    grid-row: 1 / 3 !important;
+    margin: 0 !important;
+  }
+
+  .step-card:nth-child(n) .step-art img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .step-card h3,
+  .step-card p {
+    width: auto !important;
+    max-width: none !important;
+    grid-column: 2 !important;
+  }
+
+  .step-card h3 {
+    align-self: end !important;
+    margin: 0 !important;
+    font-size: 18px !important;
+    line-height: 1.15 !important;
+  }
+
+  .step-card p {
+    align-self: start !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+  }
+
+  .steps-decor { opacity: .55 !important; }
+  .steps-blob-left,
+  .steps-blob-right { display: none !important; }
+
+  /* The supplied mobile composition is much clearer than shrinking the 1120px scene. */
+  .explanation {
+    padding-bottom: 34px !important;
+  }
+
+  .explanation-inner {
+    position: relative !important;
+    left: auto !important;
+    width: min(calc(100% - 20px), 390px) !important;
+    max-width: none !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    transform: none !important;
+  }
+
+  .explanation h2 {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: calc(100% - 12px) !important;
+    margin: 0 6px 18px !important;
+  }
+
+  .explanation-title-mark { padding: 0 !important; }
+  .explanation-title-mark::before {
+    left: -7px !important;
+    top: -10px !important;
+    width: calc(100% + 18px) !important;
+    height: 64px !important;
+  }
+
+  .explanation-stage {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 390 / 1150 !important;
+    background: url('./assets/illustrations/explanation-demo.png') center top / contain no-repeat !important;
+  }
+
+  .explanation-stage > * { display: none !important; }
+  .explanation-blob-left { display: none !important; }
+
+  /* Capabilities */
+  .capabilities-inner { position: relative !important; }
+  .capabilities h2 br { display: none !important; }
+
+  .capabilities-title-mark {
+    display: inline-block !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+
+  .capabilities-title-mark > img {
+    left: -8px !important;
+    bottom: -7px !important;
+    width: calc(100% + 16px) !important;
+    height: 46px !important;
+  }
+
+  .capability-grid {
+    display: grid !important;
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .feature-card {
+    display: grid !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 154px !important;
+    grid-template-columns: 112px minmax(0, 1fr) !important;
+    align-items: center !important;
+    gap: 14px !important;
+    padding: 14px 16px !important;
+    overflow: hidden !important;
+  }
+
+  .feature-art {
+    width: 108px !important;
+    height: 112px !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    flex: none !important;
+  }
+
+  .feature-copy { gap: 7px !important; }
+  .feature-card h3 {
+    margin: 0 !important;
+    font-size: 17px !important;
+    line-height: 1.18 !important;
+  }
+  .feature-card p {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+  }
+  .feature-heart { left: -20px !important; bottom: -20px !important; width: 72px !important; }
+  .capabilities-dots-left { left: -30px !important; top: 48% !important; }
+  .capabilities-dots-top-right { right: -28px !important; top: 28px !important; }
+  .capabilities-blob { display: none !important; }
+
+  /* Subjects */
+  .subjects-wrap {
+    position: relative !important;
+    min-height: 0 !important;
+  }
+
+  .subjects h2 br { display: none !important; }
+  .subjects-title-mark {
+    display: inline-block !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+  .subjects-title-mark > img {
+    left: -8px !important;
+    top: -13px !important;
+    width: calc(100% + 18px) !important;
+    height: 60px !important;
+    transform: none !important;
+  }
+
+  .subject-grid {
+    display: grid !important;
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .subject-card {
+    display: grid !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 142px !important;
+    grid-template-columns: 112px minmax(0, 1fr) !important;
+    align-items: center !important;
+    gap: 14px !important;
+    padding: 14px 16px !important;
+  }
+
+  .subject-art {
+    display: block !important;
+    width: 108px !important;
+    height: 110px !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    grid-row: auto !important;
+    background: transparent !important;
+    overflow: hidden !important;
+  }
+
+  .subject-art img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .subject-card h3 {
+    margin: 0 0 7px !important;
+    font-size: 18px !important;
+    line-height: 1.18 !important;
+  }
+  .subject-card p {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+  }
+
+  .subjects-nika-wrap {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 390 / 340 !important;
+    margin: 20px 0 -20px !important;
+    background: url('./assets/illustrations/subjects-girl.png') center bottom / contain no-repeat !important;
+  }
+
+  .subjects-nika-wrap > * { display: none !important; }
+  .subjects-dots-left { left: -26px !important; top: auto !important; bottom: 120px !important; }
+  .subjects-gray-stars { right: 10px !important; top: 24px !important; }
+  .subjects-squiggle,
+  .subjects-dot { display: none !important; }
+
+  /* Comparison stays complete and becomes intentionally swipeable. */
+  .comparison-wrap { padding: 0 !important; }
+  .comparison-heading-wrap { width: 100% !important; }
+  .comparison-title-rays { left: -10px !important; top: -18px !important; width: 32px !important; }
+  .comparison-title-mark {
+    display: inline !important;
+    white-space: normal !important;
+  }
+  .comparison-title-mark::before {
+    left: -5px !important;
+    right: -5px !important;
+    top: 42% !important;
+    height: 52% !important;
+  }
+
+  .comparison-table-wrap {
+    width: 100% !important;
+    margin: 0 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    border: 1px solid #696969 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 12%) !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .comparison-table {
+    width: 760px !important;
+    min-width: 760px !important;
+    table-layout: fixed !important;
+    font-size: 12px !important;
+  }
+  .comparison-table .criteria-col { width: 190px !important; }
+  .comparison-table .nika-width { width: 112px !important; }
+  .comparison-table th,
+  .comparison-table td {
+    height: 66px !important;
+    padding: 9px !important;
+    font-size: 12px !important;
+    line-height: 1.25 !important;
+  }
+  .comparison-table thead th { height: 62px !important; }
+  .nika-heading img { width: 28px !important; height: 32px !important; }
+
+  .comparison-note {
+    display: grid !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    grid-template-columns: 48px minmax(0, 1fr) !important;
+    gap: 12px !important;
+    margin: 24px 0 0 !important;
+  }
+  .comparison-note-star { width: 48px !important; height: 50px !important; }
+  .comparison-note p {
+    width: auto !important;
+    font-size: 13px !important;
+    line-height: 1.42 !important;
+    white-space: normal !important;
+  }
+  .comparison-blob,
+  .comparison-dots,
+  .comparison-bottom-stars { display: none !important; }
+
+  /* Parents */
+  .parents-wrap {
+    position: relative !important;
+    height: auto !important;
+    margin-top: 0 !important;
+  }
+
+  .parents-copy {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+  }
+
+  .parents-copy h2 br { display: initial !important; }
+  .parents-title-mark {
+    display: inline-block !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+  .parents-title-mark > img {
+    left: -8px !important;
+    top: -12px !important;
+    width: calc(100% + 20px) !important;
+    height: 62px !important;
+  }
+
+  .parents-lead {
+    width: auto !important;
+    margin: 0 0 28px !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+  }
+
+  .parent-benefits {
+    display: grid !important;
+    width: 100% !important;
+    max-width: none !important;
+    gap: 22px !important;
+    margin: 0 !important;
+  }
+  .parent-benefits li {
+    grid-template-columns: 52px minmax(0, 1fr) !important;
+    gap: 14px !important;
+  }
+  .parent-benefits li > img {
+    width: 52px !important;
+    height: 52px !important;
+  }
+  .parent-benefits h3 {
+    margin: 0 0 5px !important;
+    font-size: 17px !important;
+    line-height: 1.2 !important;
+    white-space: normal !important;
+    width: auto !important;
+  }
+  .parent-benefits p,
+  .parent-benefits li:nth-child(n) p {
+    width: auto !important;
+    max-width: none !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+
+  .parents-phone-wrap {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 390 / 555 !important;
+    margin: 28px auto -14px !important;
+  }
+  .parents-phone-bg { display: none !important; }
+  .progress-art {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    content: url('./assets/illustrations/progress-device.png') !important;
+    object-fit: contain !important;
+  }
+  .parents-dots,
+  .parents-star-gray,
+  .parents-rays-right,
+  .parents-star-left,
+  .parents-bottom-squiggle { display: none !important; }
+
+  /* Signup */
+  .signup-container { position: relative !important; }
+  .signup h2 {
+    white-space: normal !important;
+  }
+  .signup-title-rays-wrap,
+  .signup-title-mark { position: relative !important; }
+  .signup-title-rays-wrap { display: inline !important; }
+  .signup-title-mark {
+    display: inline-block !important;
+    max-width: 100% !important;
+  }
+  .signup-title-rays { left: -12px !important; top: -20px !important; width: 30px !important; }
+  .signup-title-mark > img {
+    left: -6px !important;
+    top: -8px !important;
+    width: calc(100% + 14px) !important;
+    height: 48px !important;
+  }
+
+  .signup-grid {
+    display: grid !important;
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .signup-form-wrap { width: 100% !important; }
+  .signup-form {
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 24px 18px 20px !important;
+    border-width: 2px !important;
+    border-radius: 20px !important;
+  }
+  .signup-form .field,
+  .signup-form fieldset {
+    margin: 0 0 24px !important;
+  }
+  .field > label,
+  .signup-form legend {
+    margin-bottom: 10px !important;
+    font-size: 17px !important;
+    line-height: 1.25 !important;
+  }
+  .signup-form select,
+  .signup-form input:not([type='checkbox']) {
+    height: 44px !important;
+    padding: 9px 12px !important;
+    border-width: 1.5px !important;
+    border-radius: 8px !important;
+    font-size: 16px !important;
+  }
+  .check-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    font-size: 15px !important;
+    line-height: 1.35 !important;
+  }
+  .check-grid label:nth-child(n) { grid-column: auto !important; }
+  .signup-form input[type='checkbox'] {
+    width: 22px !important;
+    height: 22px !important;
+    flex: 0 0 22px !important;
+  }
+  .consent {
+    gap: 10px !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+  }
+  .consent span { white-space: normal !important; }
+  .submit-button {
+    width: 100% !important;
+    min-height: 48px !important;
+    height: auto !important;
+    margin-top: 18px !important;
+    font-size: 16px !important;
+  }
+  .no-card,
+  .form-status { font-size: 12px !important; }
+  .signup-dots,
+  .signup-blob-left,
+  .signup-blob-right { display: none !important; }
+
+  .signup-visual {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 390 / 492 !important;
+    margin: 0 !important;
+    background: url('./assets/illustrations/signup-girl.png') center top / contain no-repeat !important;
+  }
+  .signup-visual > * { display: none !important; }
+
+  /* FAQ and footer */
+  .faq .container { width: min(calc(100% - 32px), 520px) !important; }
+  .faq h2 { margin-bottom: 24px !important; }
+  .accordion { gap: 10px !important; }
+  .accordion summary {
+    min-height: 58px !important;
+    padding: 14px 48px 14px 16px !important;
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+  }
+  .accordion summary::after { right: 16px !important; top: 10px !important; }
+  .accordion details p {
+    padding: 0 16px 16px !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+
+  .site-footer {
+    min-height: 0 !important;
+    padding: 44px 0 !important;
+  }
+  .footer-grid {
+    display: grid !important;
+    width: min(calc(100% - 32px), 520px) !important;
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+  .footer-grid > div { margin: 0 !important; }
+  .footer-logo { font-size: 32px !important; }
+  .footer-grid p { margin-top: 14px !important; }
+  .footer-grid h2 { font-size: 17px !important; }
+  .footer-dots {
+    position: static !important;
+    margin: 28px 0 0 !important;
+    font-size: 22px !important;
+  }
+}
+
+/* Small phones need fluid hero geometry as well as the layout above. */
+@media (max-width: 374px) {
+  .hero,
+  .hero-layout,
+  .hero-art { width: 100% !important; }
+
+  .hero-copy {
+    left: 16px !important;
+    width: calc(100% - 32px) !important;
+    max-width: none !important;
+  }
+
+  .hero h1,
+  .hero-lead,
+  .benefit-chips,
+  .mobile-how-title {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .hero h1 {
+    font-size: 29px !important;
+    line-height: 1.25 !important;
+  }
+
+  .benefit-chips li:nth-child(n) {
+    width: auto !important;
+    flex: 0 1 auto !important;
+  }
+
+  .benefit-chips li:nth-child(4) { max-width: 100% !important; }
+  .hero-art { top: 650px !important; }
+  .mobile-how-title { left: 16px !important; font-size: 29px !important; }
+
+  .hero-chat {
+    left: 0 !important;
+    width: 390px !important;
+    transform: scale(calc((100vw - 16px) / 390)) !important;
+    transform-origin: top left !important;
+  }
+
+  .situation-card,
+  .feature-card,
+  .subject-card {
+    grid-template-columns: 88px minmax(0, 1fr) !important;
+    padding-inline: 12px !important;
+  }
+
+  .situation-icon,
+  .feature-art,
+  .subject-art { width: 84px !important; }
+}
+
+/* v59 — visual polish after full-page mobile review. */
+@media (max-width: 768px) {
+  /* Keep every yellow accent attached to its words on narrow screens. */
+  .situations-title-mark::after,
+  .steps h2 mark::before,
+  .explanation-title-mark::before,
+  .comparison-title-mark::before,
+  .capabilities-title-mark > img,
+  .subjects-title-mark > img,
+  .parents-title-mark > img,
+  .signup-title-mark > img {
+    display: none !important;
+  }
+
+  .situations-title-mark,
+  .steps h2 mark,
+  .explanation-title-mark,
+  .capabilities-title-mark,
+  .subjects-title-mark,
+  .comparison-title-mark,
+  .parents-title-mark,
+  .signup-title-mark {
+    position: relative !important;
+    display: inline !important;
+    padding: 0 .05em !important;
+    background: linear-gradient(transparent 54%, #fff1b9 54% 91%, transparent 91%) !important;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .section:not(.hero) {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+
+  .section:not(.hero) h2 {
+    margin-bottom: 32px !important;
+  }
+
+  /* Situations: compact 2 × 3 grid, matching the desktop card rhythm. */
+  .situation-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .situation-card {
+    display: flex !important;
+    min-height: 230px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    padding: 12px !important;
+  }
+
+  .situation-icon {
+    width: 88px !important;
+    height: 88px !important;
+    margin: 0 auto !important;
+  }
+
+  .situation-copy { width: 100% !important; }
+  .situation-card h3 {
+    font-size: 15px !important;
+    line-height: 1.18 !important;
+  }
+  .situation-card p {
+    font-size: 11.5px !important;
+    line-height: 1.36 !important;
+  }
+
+  .situation-stage {
+    margin-top: 28px !important;
+  }
+
+  /* Steps: clear the legacy arrows and add quiet numbered markers. */
+  .steps-grid { counter-reset: mobile-step; }
+  .step-card {
+    counter-increment: mobile-step;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .step-card::before {
+    content: counter(mobile-step, decimal-leading-zero) !important;
+    display: grid !important;
+    position: absolute !important;
+    z-index: 3 !important;
+    top: 12px !important;
+    right: 12px !important;
+    left: auto !important;
+    width: 34px !important;
+    height: 34px !important;
+    place-items: center !important;
+    border: 1px solid var(--yellow) !important;
+    border-radius: 50% !important;
+    background: var(--yellow-light) !important;
+    color: var(--ink) !important;
+    font-size: 12px !important;
+    line-height: 1 !important;
+    transform: none !important;
+  }
+
+  .step-card::after { display: none !important; content: none !important; }
+  .step-card h3 { padding-right: 30px !important; }
+
+  /* Capabilities: return to a balanced 2-column mobile grid. */
+  .capability-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .feature-card {
+    display: flex !important;
+    min-height: 248px !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    padding: 12px !important;
+  }
+
+  .feature-art {
+    width: 100% !important;
+    height: 104px !important;
+    flex: 0 0 104px !important;
+  }
+
+  .feature-card h3 {
+    font-size: 15px !important;
+    line-height: 1.18 !important;
+  }
+  .feature-card p {
+    font-size: 11.5px !important;
+    line-height: 1.36 !important;
+  }
+
+  .feature-heart {
+    left: -18px !important;
+    bottom: -18px !important;
+    width: 60px !important;
+  }
+
+  /* Headings that contain deliberate line breaks keep natural word spacing. */
+  .subjects h2 br,
+  .capabilities h2 br,
+  .parents-copy h2 br {
+    display: initial !important;
+  }
+
+  .subjects-title-mark,
+  .parents-title-mark,
+  .signup-title-mark {
+    display: inline !important;
+    max-width: none !important;
+  }
+
+  .comparison-title-mark { white-space: normal !important; }
+
+  .comparison-table-wrap::before {
+    content: 'Листайте таблицу вправо →';
+    display: block;
+    position: sticky;
+    left: 0;
+    width: min(100%, 343px);
+    padding: 9px 12px;
+    border-bottom: 1px solid #d8d8d8;
+    color: #696969;
+    background: #fff;
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  .signup h2 {
+    max-width: 350px !important;
+    line-height: 1.2 !important;
+  }
+
+  .signup-title-mark {
+    display: inline-block !important;
+    margin-top: 3px !important;
+  }
+
+  .signup-title-rays {
+    top: -18px !important;
+    left: -9px !important;
+  }
+}
+
+@media (max-width: 359px) {
+  .situation-grid,
+  .capability-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .situation-card,
+  .feature-card {
+    display: grid !important;
+    min-height: 148px !important;
+    grid-template-columns: 88px minmax(0, 1fr) !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  .situation-icon,
+  .feature-art {
+    width: 84px !important;
+    height: 104px !important;
+    margin: 0 !important;
+  }
+}
