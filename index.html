@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Ника — персональный ИИ-репетитор для школьников 1–11 классов." />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Ника — персональный ИИ-репетитор</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#top" aria-label="Ника — на главную">Ника</a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="#how">Как это работает?</a><a href="#features">Возможности</a><a href="#parents">Для родителей</a><a href="#faq">FAQ</a>
+        </nav>
+        <a class="button button-dark header-cta" href="#start"><span class="desktop-label">Заниматься!</span><span class="mobile-label">Начать!</span></a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section hero" id="top">
+        <img class="hero-dots hero-dots-right" src="./assets/figma/hero/dots.svg" alt="" aria-hidden="true" style="left:-9999px;right:auto;top:-9999px;bottom:auto;" />
+        <img class="hero-dots hero-dots-left" src="./assets/figma/hero/dots.svg" alt="" aria-hidden="true" style="left:-9999px;right:auto;top:-9999px;bottom:auto;" />
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <img class="hero-sparkle" src="./assets/figma/hero/stars.svg" alt="" aria-hidden="true" />
+            <h1>Ребёнок не понял<br />тему в школе? <mark>Ника<img class="hero-rays" src="./assets/figma/hero/rays.svg" alt="" aria-hidden="true" /><img class="hero-rays-mobile" src="./assets/figma/hero/rays-mobile-clean.png" alt="" aria-hidden="true" /></mark><br />объяснит по-другому!</h1>
+            <p class="hero-lead">Персональный ИИ-репетитор, который помогает разобраться в школьной программе, объясняет задания по фото и отвечает на вопросы столько раз, сколько потребуется.</p>
+            <ul class="benefit-chips" aria-label="Преимущества">
+              <li><img src="./assets/figma/hero/comment-alt-message.svg" alt="" aria-hidden="true" /><span>Объясняет по-разному</span></li>
+              <li><img src="./assets/figma/hero/camera.svg" alt="" aria-hidden="true" /><span>Помогает по фото</span></li>
+              <li><img src="./assets/figma/hero/graduation-cap.svg" alt="" aria-hidden="true" /><span>Для 1–11 классов</span></li>
+              <li><img src="./assets/figma/hero/book-open.svg" alt="" aria-hidden="true" /><span>Предметы школьной программы</span></li>
+            </ul>
+            <div class="hero-actions">
+              <a class="button button-dark hero-primary" href="#start">Начать заниматься</a>
+              <a class="button button-outline desktop-only hero-secondary" href="#how">Как это работает?</a>
+            </div>
+          </div>
+          <div class="hero-art">
+            <h2 class="mobile-how-title">Как это <mark>работает?<img class="mobile-how-rays" src="./assets/figma/hero/rays.svg" alt="" aria-hidden="true" /></mark></h2>
+
+            <div class="hero-chat" aria-label="Демонстрационный чат с Никой">
+              <div class="hero-chat-bg" aria-hidden="true"></div>
+              <img class="hero-chat-heart" src="./assets/figma/situations/hearts.svg" alt="" aria-hidden="true" />
+
+              <div class="hero-chat-phone">
+                <div class="hero-chat-header">
+                  <img class="hero-chat-header-icon hero-chat-menu" src="./assets/figma/explanation/menu-hamburger.svg" alt="" aria-hidden="true" />
+                  <strong>Ника</strong>
+                  <span class="hero-chat-header-actions">
+                    <img class="hero-chat-header-icon" src="./assets/figma/explanation/history.svg" alt="" aria-hidden="true" />
+                    <img class="hero-chat-header-icon" src="./assets/figma/explanation/menu-more.svg" alt="" aria-hidden="true" />
+                  </span>
+                </div>
+
+                <div class="hero-chat-subject">
+                  <img src="./assets/figma/explanation/calculator.svg" alt="" aria-hidden="true" />
+                  <span>Математика</span>
+                </div>
+
+                <div class="hero-chat-messages" id="hero-chat-messages" aria-live="polite">
+                  <div class="hero-chat-bubble hero-chat-question">
+                    Почему средняя скорость<br class="hero-chat-mobile-break" />
+                    не всегда среднее двух скоростей?
+                  </div>
+
+                  <div class="hero-chat-bubble hero-chat-answer">
+                    <p>Ты проехал 60 км со скоростью 60 км/ч<br />и вернулся со скоростью 30 км/ч.</p>
+                    <p>Туда ушёл 1 час, обратно — 2 часа.<br />Всего: 120 км за 3 часа.</p>
+                    <p>120 ÷ 3 = 40 км/ч</p>
+                    <p>Поэтому средняя скорость 40 км/ч,<br />а не 45.</p>
+                  </div>
+                </div>
+
+                <div class="hero-chat-chips">
+                  <button type="button"><img src="./assets/figma/explanation/like-icon.png" alt="" aria-hidden="true" />Понятно</button>
+                  <button type="button"><img src="./assets/figma/explanation/comment-blue.svg" alt="" aria-hidden="true" />Объясни ещё</button>
+                </div>
+
+                <form class="hero-chat-input" id="hero-chat-form">
+                  <img class="hero-chat-paperclip" src="./assets/figma/explanation/paperclip.svg" alt="" aria-hidden="true" />
+                  <input id="hero-chat-input" type="text" placeholder="Задай вопрос..." autocomplete="off" aria-label="Задать вопрос Нике" />
+                  <button class="hero-chat-send" type="submit" aria-label="Отправить вопрос">
+                    <img src="./assets/figma/explanation/send.svg" alt="" aria-hidden="true" />
+                  </button>
+                </form>
+              </div>
+
+              <img class="hero-pencil hero-chat-pencil" src="./assets/figma/hero/pencil-full.png" alt="" aria-hidden="true" />
+            </div>
+          </div>
+      </section>
+
+      <section class="section situations" aria-labelledby="situations-title">
+        <img class="situations-hearts" src="./assets/figma/situations/hearts.svg" alt="" aria-hidden="true" />
+        <img class="situations-dots" src="./assets/figma/situations/dots.svg" alt="" aria-hidden="true" />
+        <div class="container situations-inner">
+          <h2 id="situations-title">Знакомые <mark class="situations-title-mark">ситуации?</mark></h2>
+          <div class="situation-grid">
+            <article class="card situation-card"><img class="situation-icon" src="./assets/figma/situations/icon-homework.png" alt="" aria-hidden="true" /><div class="situation-copy"><h3>Домашнее задание занимает весь вечер</h3><p>Ребёнок долго сидит над одной задачей, нервничает<br class="desktop-break" /> и постоянно просит помощи.</p></div></article>
+            <article class="card situation-card"><img class="situation-icon" src="./assets/figma/situations/icon-confused.png" alt="" aria-hidden="true" /><div class="situation-copy"><h3>«Я вообще ничего<br class="desktop-break" /> не понял на уроке»</h3><p>Новую тему объяснили слишком быстро, а ребёнок постеснялся переспросить.</p></div></article>
+            <article class="card situation-card"><img class="situation-icon" src="./assets/figma/situations/icon-explain.png" alt="" aria-hidden="true" /><div class="situation-copy"><h3>Вы пытаетесь объяснить сами</h3><p>Но школьная программа давно забылась, а ваши объяснения ребёнку не подходят.</p></div></article>
+            <article class="card situation-card"><img class="situation-icon" src="./assets/figma/situations/icon-answer.png" alt="" aria-hidden="true" /><div class="situation-copy"><h3>Ответ найден,<br class="desktop-break" /> но понимания нет</h3><p>Решение можно переписать,<br class="desktop-break" /> но решить похожую задачу ребёнок всё ещё не может.</p></div></article>
+            <article class="card situation-card"><img class="situation-icon" src="./assets/figma/situations/icon-gaps.png" alt="" aria-hidden="true" /><div class="situation-copy"><h3>Пробелы постепенно накапливаются</h3><p>Без понимания базовых тем каждая следующая глава становится сложнее.</p></div></article>
+            <article class="card situation-card"><img class="situation-icon" src="./assets/figma/situations/icon-questions.png" alt="" aria-hidden="true" /><div class="situation-copy"><h3>Вопросы появляются каждый день</h3><p>А урок с репетитором или консультация учителя будут только через несколько дней.</p></div></article>
+          </div>
+
+          <div class="situation-stage">
+            <img class="situation-girl" src="./assets/figma/situations/girl-situations.png" width="410" height="383" alt="Ника объясняет тему" />
+            <div class="situation-tooltip">
+              <p>Я рядом каждый день: объясню тему простыми словами,<br class="desktop-break" /> разберу задачу по шагам и покажу ошибку. Не понял —<br class="desktop-break" /> объясню иначе, спокойно и без осуждения.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="section steps" id="how" aria-labelledby="steps-title">
+        <img class="steps-decor steps-decor-top" src="./assets/figma/steps/decor-top.svg" alt="" aria-hidden="true" />
+        <img class="steps-decor steps-blob-right" src="./assets/figma/steps/blob-right.svg" alt="" aria-hidden="true" />
+        <img class="steps-decor steps-blob-left" src="./assets/figma/steps/blob-left.svg" alt="" aria-hidden="true" />
+        <img class="steps-decor steps-dots" src="./assets/figma/steps/dots.svg" alt="" aria-hidden="true" />
+        <div class="steps-inner">
+          <h2 id="steps-title">От вопроса до понимания — <mark>шаг за шагом</mark></h2>
+          <div class="steps-progress" aria-hidden="true">
+            <span class="progress-number">01</span><span class="progress-arrow"></span>
+            <span class="progress-number">02</span><span class="progress-arrow"></span>
+            <span class="progress-number">03</span><span class="progress-arrow"></span>
+            <span class="progress-number">04</span>
+          </div>
+          <ol class="steps-grid">
+            <li class="card step-card"><div class="step-art"><img src="./assets/figma/steps/question.svg" alt="" aria-hidden="true" /></div><h3>Расскажите,<br />что непонятно</h3><p>Ребёнок пишет вопрос своими словами или выбирает предмет и тему.</p></li>
+            <li class="card step-card"><div class="step-art"><img src="./assets/figma/steps/smartphone.svg" alt="" aria-hidden="true" /></div><h3>Или отправьте<br />фото задания</h3><p>Ника распознает условие задачи и поможет разобраться,<br />с чего начать решение.</p></li>
+            <li class="card step-card"><div class="step-art"><img src="./assets/figma/steps/board-lamp-crisp.png" alt="" aria-hidden="true" /></div><h3>Получите понятное<br />объяснение</h3><p>Ника разбирает тему последовательно, приводит примеры и объясняет логику решения.</p></li>
+            <li class="card step-card"><div class="step-art"><img src="./assets/figma/steps/retry.svg" alt="" aria-hidden="true" /></div><h3>Не понятно?<br />Объяснит иначе</h3><p>Можно попросить более простое объяснение, другой пример или подробный разбор.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section explanation" aria-labelledby="explanation-title">
+        <img class="explanation-blob-left" src="./assets/figma/explanation/blob-left.png" alt="" aria-hidden="true" />
+        <div class="container explanation-inner">
+          <h2 id="explanation-title">Одну тему можно объяснить <mark class="explanation-title-mark">по-разному</mark></h2>
+
+          <div class="explanation-stage">
+            <div class="explanation-phone explanation-phone-left" aria-label="Первый вариант объяснения">
+              <div class="ex-phone-header"><img class="ex-header-icon" src="./assets/figma/explanation/menu-hamburger.svg" alt="" aria-hidden="true" /><strong>Ника</strong><span class="ex-header-actions"><img class="ex-header-icon" src="./assets/figma/explanation/history.svg" alt="" aria-hidden="true" /><img class="ex-header-icon" src="./assets/figma/explanation/menu-more.svg" alt="" aria-hidden="true" /></span></div>
+              <div class="ex-subject"><img src="./assets/figma/explanation/calculator.svg" alt="" aria-hidden="true" /><span>Математика</span></div>
+
+              <div class="ex-bubble ex-user-left">Как найти <b>X</b> в уравнении x+3=8?</div>
+              <div class="ex-bubble ex-answer-left">
+                <p>Чтобы найти x, нужно перенести тройку<br>в правую часть уравнения, изменив знак:</p>
+                <p>x+3=8<br>x=8−3<br>x=5</p>
+              </div>
+
+              <div class="ex-chips">
+                <span><img src="./assets/figma/explanation/like-icon.png" alt="" aria-hidden="true" />Понятно</span>
+                <span><img src="./assets/figma/explanation/comment-blue.svg" alt="" aria-hidden="true" />Объясни по-другому</span>
+              </div>
+              <div class="ex-input"><img class="ex-paperclip" src="./assets/figma/explanation/paperclip.svg" alt="" aria-hidden="true" /><span>Задай вопрос...</span><img class="ex-send" src="./assets/figma/explanation/send.svg" alt="" aria-hidden="true" /></div>
+            </div>
+
+            <div class="explanation-phone explanation-phone-right" aria-label="Второй вариант объяснения">
+              <div class="ex-phone-header"><img class="ex-header-icon" src="./assets/figma/explanation/menu-hamburger.svg" alt="" aria-hidden="true" /><strong>Ника</strong><span class="ex-header-actions"><img class="ex-header-icon" src="./assets/figma/explanation/history.svg" alt="" aria-hidden="true" /><img class="ex-header-icon" src="./assets/figma/explanation/menu-more.svg" alt="" aria-hidden="true" /></span></div>
+              <div class="ex-subject"><img src="./assets/figma/explanation/calculator.svg" alt="" aria-hidden="true" /><span>Математика</span></div>
+
+              <div class="ex-bubble ex-user-right">Объясни по-другому</div>
+              <div class="ex-bubble ex-answer-right">
+                <p>Представь, что уравнение — это весы.<br>Слева лежит неизвестная коробка и ещё 3 кг,<br>а справа — 8 кг.</p>
+                <p>Чтобы узнать вес коробки, нужно убрать 3 кг<br>с левой стороны. Но тогда столько же нужно<br>убрать и справа, чтобы весы остались<br>в равновесии.</p>
+                <p>Поэтому:<br>x+3−3=8−3<br>x=5</p>
+                <p>Тройка не «перепрыгнула» через знак<br>равенства. Мы просто вычли 3 с обеих сторон.</p>
+              </div>
+              <div class="ex-input"><img class="ex-paperclip" src="./assets/figma/explanation/paperclip.svg" alt="" aria-hidden="true" /><span>Задай вопрос...</span><img class="ex-send" src="./assets/figma/explanation/send.svg" alt="" aria-hidden="true" /></div>
+            </div>
+
+            <img class="explanation-nika-bg" src="./assets/figma/explanation/nika-bg-v18.png" alt="" aria-hidden="true" />
+            <img class="explanation-nika" src="./assets/figma/explanation/nika.png" alt="Ника объясняет тему по-другому" />
+            <div class="explanation-cloud-wrap">
+              <img src="./assets/figma/explanation/cloud.png" alt="" aria-hidden="true" />
+              <p>Ребёнок может переспросить<br>столько раз, сколько нужно,<br>без страха показаться<br>невнимательным.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section capabilities" id="features" aria-labelledby="capabilities-title">
+        <img class="capabilities-dots capabilities-dots-left" src="./assets/figma/capabilities/dots-left.svg" alt="" aria-hidden="true" />
+        <img class="capabilities-dots capabilities-dots-top-right" src="./assets/figma/capabilities/dots-top-right.svg" alt="" aria-hidden="true" />
+        <img class="capabilities-blob" src="./assets/figma/capabilities/blob-right.png" alt="" aria-hidden="true" />
+        <div class="container capabilities-inner">
+          <h2 id="capabilities-title">Всё необходимое, чтобы разобраться<br /><span class="capabilities-title-mark">со школьной программой<img src="./assets/figma/capabilities/title-bg.png" alt="" aria-hidden="true" /></span></h2>
+          <div class="capability-grid">
+            <article class="card feature-card"><div class="feature-art"><img src="./assets/figma/capabilities/card-1.svg" alt="" aria-hidden="true" /></div><div class="feature-copy"><h3>Вопросы своими словами</h3><p>Не нужно формулировать запрос как в учебнике. Ребёнок может просто написать, что именно ему непонятно.</p></div></article>
+            <article class="card feature-card"><div class="feature-art"><img src="./assets/figma/capabilities/card-2.svg" alt="" aria-hidden="true" /></div><div class="feature-copy"><h3>Разбор задания по фото</h3><p>Можно сфотографировать домашнюю работу и получить помощь с условием, правилами и ходом решения.</p></div></article>
+            <article class="card feature-card"><div class="feature-art"><img src="./assets/figma/capabilities/card-3.svg" alt="" aria-hidden="true" /></div><div class="feature-copy"><h3>Пошаговые объяснения</h3><p>Ника помогает пройти путь от условия задачи до ответа, объясняя каждый этап.</p></div></article>
+            <article class="card feature-card feature-card-heart"><img class="feature-heart" src="./assets/figma/capabilities/hearts.svg" alt="" aria-hidden="true" /><div class="feature-art"><img src="./assets/figma/capabilities/card-4.svg" alt="" aria-hidden="true" /></div><div class="feature-copy"><h3>Объяснение другим способом</h3><p>Если ребёнок не понял, Ника упрощает формулировку, приводит аналогию или показывает другой пример.</p></div></article>
+            <article class="card feature-card"><div class="feature-art"><img src="./assets/figma/capabilities/card-5.svg" alt="" aria-hidden="true" /></div><div class="feature-copy"><h3>Поиск пробелов в знаниях</h3><p>Если проблема связана с предыдущей темой, Ника поможет вернуться к базе и повторить необходимый материал.</p></div></article>
+            <article class="card feature-card"><div class="feature-art"><img src="./assets/figma/capabilities/card-6.svg" alt="" aria-hidden="true" /></div><div class="feature-copy"><h3>Прогресс для родителя</h3><p>Родитель видит, какие темы ребёнок изучал и где ему потребовалась дополнительная помощь.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section subjects" aria-labelledby="subjects-title">
+        <img class="subjects-dots subjects-dots-left" src="./assets/figma/subjects/dots-left.svg" alt="" aria-hidden="true" />
+        <img class="subjects-decor subjects-gray-stars" src="./assets/figma/subjects/stars-gray.svg" alt="" aria-hidden="true" />
+        <img class="subjects-decor subjects-squiggle" src="./assets/figma/subjects/squiggle.svg" alt="" aria-hidden="true" />
+        <img class="subjects-decor subjects-dot subjects-dot-top" src="./assets/figma/subjects/dot.png" alt="" aria-hidden="true" />
+        <img class="subjects-decor subjects-dot subjects-dot-right" src="./assets/figma/subjects/dot.png" alt="" aria-hidden="true" />
+
+        <div class="container subjects-wrap">
+          <h2 id="subjects-title"><span class="subjects-title-mark">Один помощник<img src="./assets/figma/subjects/title-bg.png" alt="" aria-hidden="true" /></span><br />для основных школьных предметов</h2>
+
+          <div class="subject-grid">
+            <article class="card subject-card">
+              <div class="subject-art"><img src="./assets/figma/subjects/card-1.svg" alt="" aria-hidden="true" /></div>
+              <div class="subject-copy"><h3>Математика</h3><p>Задачи, дроби, уравнения, проценты, геометрия и&nbsp;другие темы школьной программы.</p></div>
+            </article>
+            <article class="card subject-card">
+              <div class="subject-art"><img src="./assets/figma/subjects/card-2.svg" alt="" aria-hidden="true" /></div>
+              <div class="subject-copy"><h3>Русский язык</h3><p>Правила, разбор предложений, части речи, орфография и&nbsp;работа над ошибками.</p></div>
+            </article>
+            <article class="card subject-card">
+              <div class="subject-art"><img src="./assets/figma/subjects/card-3.svg" alt="" aria-hidden="true" /></div>
+              <div class="subject-copy"><h3>Английский язык</h3><p>Грамматика, школьные упражнения, перевод, лексика и&nbsp;объяснение правил на&nbsp;понятных примерах.</p></div>
+            </article>
+            <article class="card subject-card">
+              <div class="subject-art"><img src="./assets/figma/subjects/card-4.svg" alt="" aria-hidden="true" /></div>
+              <div class="subject-copy"><h3>Другие предметы</h3><p>Ника поможет разобраться с&nbsp;физикой, биологией, историей и&nbsp;другими школьными темами — объяснит главное простыми словами.</p></div>
+            </article>
+          </div>
+
+          <div class="subjects-nika-wrap">
+            <img class="subjects-nika" src="./assets/figma/subjects/nika.png" alt="Ника — один помощник для разных предметов" />
+            <div class="subjects-tooltip"><p>Ребёнку не нужно переключаться между разными сервисами и искать отдельного помощника для каждого предмета.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section comparison" aria-labelledby="comparison-title">
+        <img class="comparison-blob comparison-blob-left" src="./assets/figma/comparison/left-blob.svg" alt="" aria-hidden="true" />
+        <img class="comparison-blob comparison-blob-right" src="./assets/figma/comparison/right-blob.svg" alt="" aria-hidden="true" />
+        <img class="comparison-dots" src="./assets/figma/comparison/dots-right.svg" alt="" aria-hidden="true" />
+        <img class="comparison-bottom-stars" src="./assets/figma/comparison/bottom-stars.svg" alt="" aria-hidden="true" />
+        <div class="comparison-wrap">
+          <div class="comparison-heading-wrap">
+            <img class="comparison-title-rays" src="./assets/figma/comparison/title-rays.svg" alt="" aria-hidden="true" />
+            <h2 id="comparison-title">Не готовый ответ,<br /><span class="comparison-title-mark">а персональное объяснение</span></h2>
+          </div>
+
+          <div class="comparison-table-wrap">
+            <table class="comparison-table">
+              <colgroup>
+                <col class="criteria-col" />
+                <col class="nika-width" />
+                <col />
+                <col />
+                <col />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>Критерий</th>
+                  <th class="nika-col"><span class="nika-heading">Ника <img src="./assets/figma/comparison/heart.svg" alt="" aria-hidden="true" /></span></th>
+                  <th>Поиск в интернете</th>
+                  <th>Универсальный ИИ</th>
+                  <th>Репетитор</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th>Доступность в момент<br />возникновения вопроса</th><td class="nika-col nika-yes">Да</td><td>Да</td><td>Да</td><td>По расписанию</td></tr>
+                <tr><th>Можно отправить фото задания</th><td class="nika-col nika-yes">Да</td><td>Ограниченно</td><td>Зависит от сервиса</td><td>Да</td></tr>
+                <tr><th>Можно попросить объяснить<br />другим способом</th><td class="nika-col nika-yes">Да</td><td>Нужно искать<br />новый материал</td><td>Да</td><td>Да</td></tr>
+                <tr><th>Специализированный<br />сценарий обучения</th><td class="nika-col nika-yes">Да</td><td>Нет</td><td>Нет</td><td>Да</td></tr>
+                <tr><th>Помощь по нескольким<br />предметам</th><td class="nika-col nika-yes">Да</td><td>Да</td><td>Да</td><td>Обычно ограниченно</td></tr>
+                <tr><th>Прогресс для родителя</th><td class="nika-col nika-yes">Да</td><td>Нет</td><td>Нет</td><td>Зависит<br />от специалиста</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="comparison-note">
+            <img class="comparison-note-star" src="./assets/figma/comparison/note-star.svg" alt="" aria-hidden="true" />
+            <p>Ника не заменяет учителя или репетитора. Она помогает ребёнку в тот момент,<br />когда возник вопрос и нужно ещё раз разобраться в теме.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section parents" id="parents" aria-labelledby="parents-title">
+        <img class="parents-dots" src="./assets/figma/subjects/dots-left.svg" alt="" aria-hidden="true" />
+        <img class="parents-star-gray" src="./assets/figma/parents/star-gray.svg" alt="" aria-hidden="true" />
+        <img class="parents-rays-right" src="./assets/figma/parents/rays-right.svg" alt="" aria-hidden="true" />
+        <img class="parents-star-left" src="./assets/figma/parents/star-left.svg" alt="" aria-hidden="true" />
+        <img class="parents-bottom-squiggle" src="./assets/figma/parents/bottom-squiggle.svg" alt="" aria-hidden="true" />
+        <div class="parents-wrap">
+          <div class="parents-copy">
+            <h2 id="parents-title">Ребёнок занимается самостоятельно.<br />Вы понимаете,<br /><span class="parents-title-mark">где нужна помощь<img src="./assets/figma/parents/title-bg-v34.png" alt="" aria-hidden="true" /></span></h2>
+            <p class="parents-lead">Не нужно каждый вечер проверять все задания и заново проходить школьную программу вместе с ребёнком.</p>
+            <ul class="parent-benefits">
+              <li><img src="./assets/figma/parents/check.svg" alt="" aria-hidden="true" /><div><h3>Меньше споров из-за уроков</h3><p>Ребёнок сначала пробует<br />разобраться с помощью Ники.</p></div></li>
+              <li><img src="./assets/figma/parents/search.svg" alt="" aria-hidden="true" /><div><h3>Понятно, какие темы вызывают сложности</h3><p>В прогрессе видно, где ребёнку<br />потребовалось повторное объяснение.</p></div></li>
+              <li><img src="./assets/figma/parents/bell.svg" alt="" aria-hidden="true" /><div><h3>Можно вовремя заметить пробелы</h3><p>Если сложности повторяются, родитель понимает,<br />на какую тему стоит обратить внимание.</p></div></li>
+            </ul>
+          </div>
+          <div class="parents-phone-wrap">
+            <img class="parents-phone-bg" src="./assets/figma/parents/phone-bg.svg" alt="" aria-hidden="true" />
+            <img class="progress-art" src="./assets/figma/parents/phone-final.png" alt="Экран прогресса обучения по предметам" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section signup" id="start" aria-labelledby="signup-title">
+        <img class="signup-blob-left" src="./assets/figma/signup/blob-left.svg" alt="" aria-hidden="true" />
+        <img class="signup-blob-right" src="./assets/figma/signup/blob-right.svg" alt="" aria-hidden="true" />
+        <div class="container signup-container">
+          <h2 id="signup-title">
+            <span class="signup-title-rays-wrap">
+              <img class="signup-title-rays" src="./assets/figma/signup/title-rays.svg" alt="" aria-hidden="true" />
+              Начните заниматься с
+            </span>
+            <span class="signup-title-mark">
+              <img src="./assets/figma/signup/title-bg.svg" alt="" aria-hidden="true" />
+              Никой
+            </span>
+          </h2>
+
+          <div class="signup-grid">
+            <div class="signup-form-wrap">
+              <form class="signup-form" id="signup-form" novalidate>
+                <div class="field">
+                  <label for="grade">В каком классе учится ребёнок?</label>
+                  <select id="grade" name="grade" required>
+                    <option value="">Выберите класс</option>
+                    <option>1–4 класс</option>
+                    <option>5–7 класс</option>
+                    <option>8–9 класс</option>
+                    <option>10–11 класс</option>
+                  </select>
+                </div>
+
+                <fieldset>
+                  <legend>С чем сейчас нужна помощь?</legend>
+                  <div class="check-grid">
+                    <label><input type="checkbox" name="subject" value="math" /> Математика</label>
+                    <label><input type="checkbox" name="subject" value="russian" /> Русский язык</label>
+                    <label><input type="checkbox" name="subject" value="english" /> Английский язык</label>
+                    <label><input type="checkbox" name="subject" value="homework" /> Домашние задания</label>
+                    <label><input type="checkbox" name="subject" value="exam" /> Подготовка к экзамену</label>
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <legend>Заполните необходимые данные</legend>
+                  <div class="inputs">
+                    <label><span class="sr-only">Имя ребёнка</span><input name="childName" placeholder="Имя ребёнка" autocomplete="off" required /></label>
+                    <label><span class="sr-only">Ваше имя</span><input name="parentName" placeholder="Ваше имя" autocomplete="name" required /></label>
+                    <label><span class="sr-only">Телефон или e-mail</span><input name="contact" placeholder="Телефон или e-mail" autocomplete="email" required /></label>
+                  </div>
+                </fieldset>
+
+                <label class="consent">
+                  <input type="checkbox" name="consent" required />
+                  <span>Я принимаю условия обработки <a href="#privacy">персональных данных</a></span>
+                </label>
+                <button class="button button-dark submit-button" type="submit"><span aria-hidden="true">✣</span> Начать заниматься!</button>
+                <p class="no-card">* Не нужна банковская карта</p>
+                <p class="form-status" role="status" aria-live="polite"></p>
+              </form>
+              <img class="signup-dots" src="./assets/figma/signup/dots.svg" alt="" aria-hidden="true" />
+            </div>
+
+            <div class="signup-visual">
+              <div class="signup-tooltip">
+                <img src="./assets/figma/signup/tooltip.svg" alt="" aria-hidden="true" />
+                <p>Следующий сложный вопрос<br />можно не откладывать<br />до следующего урока</p>
+              </div>
+              <img class="signup-nika" src="./assets/figma/signup/nika.png" alt="Ника" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq" aria-labelledby="faq-title"><div class="container"><h2 id="faq-title">Возможно, Вы хотите <mark>уточнить</mark></h2><div class="accordion">
+        <details><summary>Сколько стоит Ника?</summary><p>Доступ к Нике стоит 999 ₽ в месяц. Этого достаточно, чтобы ребёнок мог обращаться за помощью с уроками и школьными темами тогда, когда она нужна.</p></details><details><summary>По каким предметам Ника может помочь?</summary><p>В первую очередь Ника помогает с математикой, русским и английским языком. Также можно задавать вопросы по другим основным предметам школьной программы.</p></details><details><summary>Для каких классов подходит Ника?</summary><p>Ника рассчитана на учеников 1–11 классов. Объяснение подстраивается под уровень ребёнка, чтобы не усложнять тему там, где можно объяснить проще.</p></details><details><summary>Ника просто даёт готовый ответ?</summary><p>Нет. Главная задача Ники — помочь ребёнку разобраться. Она объясняет решение по шагам, показывает логику и, если что-то осталось непонятным, может объяснить ту же тему по-другому.</p></details><details><summary>Что делать, если ребёнок снова не понял объяснение?</summary><p>Можно просто переспросить. Ника не ограничивает ребёнка одним объяснением: вопрос можно уточнять и просить разобрать непонятный момент другим способом столько раз, сколько потребуется.</p></details><details><summary>Можно ли отправить Нике фотографию задания?</summary><p>Да. Необязательно перепечатывать условие вручную — ребёнок может сфотографировать задание и отправить его Нике, чтобы сразу перейти к разбору.</p></details><details><summary>Может ли Ника заменить репетитора?</summary><p>Зависит от того, какая помощь нужна ребёнку. Ника особенно полезна, когда вопрос возникает прямо во время домашнего задания или между занятиями с учителем. За помощью не нужно ждать следующего урока — спросить можно сразу.</p></details><details><summary>Можно ли отменить подписку?</summary><p>Да. Подписку можно отменить, если решите, что Ника вам не подходит. Дальнейших списаний после отмены не будет.</p></details>
+      </div></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-grid"><div><a class="footer-logo" href="#top">Ника <span aria-hidden="true">✦</span></a><p>Персональный AI-репетитор<br />для Вашего ребёнка</p><div class="footer-dots" aria-hidden="true">••••<br />••••</div></div><div><h2>Навигация</h2><a href="#how">Как это работает?</a><a href="#features">Возможности</a><a href="#parents">Для родителей</a><a href="#faq">FAQ</a></div><div id="privacy"><h2>Документы</h2><a href="#privacy">Политика конфиденциальности</a><a href="#privacy">Пользовательское соглашение</a><h2 class="contacts-title">Контакты</h2><a href="mailto:support@example.ru">Поддержка</a></div></div></footer>
+  </body>
+</html>
